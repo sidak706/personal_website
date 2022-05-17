@@ -1,0 +1,59 @@
+﻿<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <link href='http://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<link rel="stylesheet" href="static/style2.css"></link>
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+{% comment %} <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> {% endcomment %}
+
+
+</head>
+<body>
+
+  
+  {% block body %}  {% endblock body %}
+  
+<nav>
+    <div class="logo-image">
+        <a href="home"> <img src="static/logo.PNG"></a>
+      </div>
+    <ul class="nav-links">
+        <div class="dropdown" >
+  <button class="dropbtn">About</button>
+  
+
+</div>
+        <div class="dropdown">
+  <a href= "projects"><button class="dropbtn">Projects</button></a>
+</div>
+
+         <div class="dropdown">
+  <a href= "tutoring"><button class="dropbtn">Tutoring</button></a>
+  </div>
+  <div class="dropdown">
+    <a href= "contact"><button class="dropbtn">Contact</button></a>
+    </div>
+  
+</div>
+
+    </ul>
+    <div class="burger">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
+</nav>
+
+
+
+<script src= "static/main.js"></script>
+
+
+  
+  </body>
+</html>

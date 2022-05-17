@@ -1,0 +1,122 @@
+﻿{% extends 'base.html' %}
+{% block body %}
+
+<style>
+  body {
+    background-color: rgb(15 23 42);
+  }
+
+  .space {
+    line-height: 2.8;
+  }
+
+    
+</style>
+
+<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+<div class="container my-24 px-6 mx-auto">
+
+  <section class="mb-32 text-gray-800 text-center lg:text-left">
+      <div class="flex flex-col text-center w-full mb-20">
+        <h1 style="color: white;" class="sm:text-3xl text-2xl font-medium title-font mb-4">My Projects</h1>
+        <p style="color:white;" class="lg:w-2/3 mx-auto space ">As a programmer, I am always looking to work on different projects. These projects help me improve my skills and learn more about the language. I often use Python or Java to make these projects.</p>
+      </div>
+
+    <div class="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
+      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0" data-mdb-ripple="true"
+        data-mdb-ripple-color="light">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover">
+          <img src="static/jarvis.jpg" class="w-full rounded-t-lg" />
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Jarvis: Virtual Assistant</h5>
+          <p class="mb-4 pb-2 space">
+            A virutal assistant made using Python. It can perform a variety of tasks ranging from checking time and date to generating QR codes and playing music. With more than 700 lines of code, this is one of the biggest projects I have worked on.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
+          data-mdb-ripple-color="light">
+          <img src="static/sudoku.png" class="w-full rounded-t-lg"/>
+            <div
+              class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden hover:opacity-100 transition duration-300 ease-in-out"
+              style="background-color: rgba(251, 251, 251, 0.15)"></div>
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Sudoku Solver</h5>
+          <p class="mb-4 pb-2 space">
+            A sudoku solver made using Python and backtracking. The solver generates a random keyboard each time and solves the board regardless of the complexity. The user can see the backtracking algorithm in play as it solves the board.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white block rounded-lg shadow-lg">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
+          data-mdb-ripple-color="light">
+          <img src="static/player.png" class="rounded-t-lg" />
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Music Player</h5>
+          <p class="mb-4 pb-2 space">
+            A GUI Music Player made using Python. The user can open the songs folder and select any song they wish to play. In addition, the user can pause and resume the song as well. This is a small project with less than 150 lines of codes.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    
+
+  </section>
+
+<div class="container my-24 px-6 mx-auto">
+  <section class="mb-32 text-gray-800 text-center lg:text-left">
+
+    <div class="grid lg:grid-cols-3 gap-x-6 lg:gap-x-12">
+      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0" data-mdb-ripple="true"
+        data-mdb-ripple-color="light">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover">
+          <img src="static/cancer.jpg" class="w-full rounded-t-lg" />
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Cancer Detection</h5>
+          <p class="mb-4 pb-2 space">
+            A Cancer detecting algorithm made using Python and Machine learning. This is one of the earliest Data Science projects I worked on. The algorithm uses a simple Keras neural network and can detect whether the Cancer is malignant or benign with 80% accuracy.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white block rounded-lg shadow-lg mb-6 lg:mb-0">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
+          data-mdb-ripple-color="light">
+          <img src="static/hangman.jpg" class="w-full rounded-t-lg" />
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Hangman Game</h5>
+          <p class="mb-4 pb-2 space">
+            A Hangman GUI made using Python and pygame. The user can choose from a range of letters and depending on the answer, the hangman updates. This is one of the first games I made using Python.
+          </p>
+        </div>
+      </div>
+
+      <div class="bg-white block rounded-lg shadow-lg">
+        <div class="relative overflow-hidden bg-no-repeat bg-cover" data-mdb-ripple="true"
+          data-mdb-ripple-color="light">
+          <img src="static/spider.jpg" class="w-full rounded-t-lg" />
+        </div>
+        <div class="p-6">
+          <h5 class="font-bold text-lg mb-3">Arduino Spider</h5>
+          <p class="mb-4 pb-2 space">
+            A quadruped spider made using Arduino. This is one of the most advanced robotics projects I have worked on. The robot's build is very stable and it has the ability to walk around and perform different motions such as greeting, dancing etc.
+          </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+</div>
+</div>
+
+{% endblock body %}
