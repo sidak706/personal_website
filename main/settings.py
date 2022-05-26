@@ -30,7 +30,7 @@ SECRET_KEY = '0d@74m!9kk3af!l6+lep(kg$-%u0fj-(=ha-#f-q@mbre5qelx'
 DEBUG = True
 
 # ALLOWED_HOSTS = ['*']
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['sid-dev.herokuapp.com']
 
 
 # Application definition
