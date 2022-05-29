@@ -182,7 +182,8 @@ nav {
     transition: 0.3s;
     /* color:green; */
     /* text-decoration: underline; */
-    color:#008080;
+    /* color:#008080; */
+    color: #4fe7c3;
     cursor: pointer;
     
 }
