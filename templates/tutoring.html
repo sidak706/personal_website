@@ -29,6 +29,9 @@
   .bg-m{
     background-color: rgb(245,245,245);
   }
+  .ani{
+    font-size: 20px; 
+  }
   </style>
 
 <!-- Background image -->
@@ -37,12 +40,17 @@
 <div class="absolute top-0 right-0 bottom-0 left-0 w-full h-full overflow-hidden bg-fixed" style="background-color: rgba(2, 56, 53, 0.7)">
   <div class="flex justify-center items-center h-full">
     <div class="text-white">
-      <h2 style= "font-size: 50px" class="font-semibold text-4xl mb-4">
+      <h2 style= "font-size: 50px; line-height: 1.7;" class="font-semibold text-4xl mb-4">
         Welcome to Apricus Learning
       </h2>
-      <h4 style="font-size: 20px; " class="font-semibold text-xl mb-6">
+      {% comment %} <h4 style="font-size: 20px; " class="font-semibold text-xl mb-6">
         One on one tutoring to meet your individual needs!
-      </h4>
+      </h4> {% endcomment %}
+
+      <div id="container">
+            <div id="text" class="ani font-semibold text-xl mb-6"></div>
+        </div>  
+
     </div>
   </div>
 </div>
@@ -191,5 +199,65 @@
   </div>
 </section>
 
+{% comment %} <script src= "static/main.js"> {% endcomment %}
+  <script type="text/javascript">
 
+  // List of sentences
+  var _CONTENT = ["One on One Tutoring!", "Dynamic Course Material!", "Extra practice to ensure results!", "Improvement is guranteed!"];
+  
+  // Current sentence being processed
+  var _PART = 0;
+  
+  // Character number of the current sentence being processed 
+  var _PART_INDEX = 0;
+  
+  // Holds the handle returned from setInterval
+  var _INTERVAL_VAL;
+  
+  // Element that holds the text
+  var _ELEMENT = document.querySelector("#text");
+  
+  // Implements typing effect
+  function Type() { 
+      var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+      _ELEMENT.innerHTML = text;
+      _PART_INDEX++;
+  
+      // If full sentence has been displayed then start to delete the sentence after some time
+      if(text === _CONTENT[_PART]) {
+          clearInterval(_INTERVAL_VAL);
+          setTimeout(function() {
+              _INTERVAL_VAL = setInterval(Delete, 50);
+          }, 1000);
+      }
+  }
+  
+  // Implements deleting effect
+  function Delete() {
+      var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+      _ELEMENT.innerHTML = text;
+      _PART_INDEX--;
+  
+      // If sentence has been deleted then start to display the next sentence
+      if(text === '') {
+          clearInterval(_INTERVAL_VAL);
+  
+          // If last sentence then display the first one, else move to the next
+          if(_PART == (_CONTENT.length - 1))
+              _PART = 0;
+          else
+              _PART++;
+          _PART_INDEX = 0;
+  
+          // Start to display the next sentence after some time
+          setTimeout(function() {
+              _INTERVAL_VAL = setInterval(Type, 100);
+          }, 200);
+      }
+  }
+  
+  // Start the typing effect on load
+  _INTERVAL_VAL = setInterval(Type, 100);
+</script>
+  
 {% endblock body %}

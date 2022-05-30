@@ -472,7 +472,7 @@ header .container {
     .ttl{
         font-size: 15px;
         color: #64ffda;
-        margin: 0;
+        margin-bottom: 10px;
     }
     
     .sub{
@@ -480,14 +480,21 @@ header .container {
         font-size: 60px; 
         color: #ccd6f6;
         font-weight: bold;
+        font-family: "Times New Roman";
+        {% comment %} line-height: 1.5; {% endcomment %}
     }
 </style>
 
  <section style= "background-color: rgb(15 23 42);"class="text-gray-600 body-font">
     <div class="container mx-auto flex px-5 py-24 md:flex-row flex-col items-center">
       <div class="lg:flex-grow md:w-1/2 lg:pr-24 md:pr-16 flex flex-col md:items-start md:text-left mb-16 md:mb-0 items-center text-center">
+        
+        
         <h1 class="ttl title-font sm:text-4xl text-3xl mb-4 font-medium text-gray-900">Hi, my name is 
           <h1 class= "sub">Sidak Arora</h1>
+          {% comment %} <div id="container">
+            <div id="text" class="sub"></div>
+        </div>  {% endcomment %}
         </h1>
         {% comment %} <p class="contnt mb-8 leading-relaxed">Copper mug try-hard pitchfork pour-over freegan heirloom neutra air plant cold-pressed tacos poke beard tote bag. Heirloom echo park mlkshk tote bag selvage hot chicken authentic tumeric truffaut hexagon try-hard chambray.</p> {% endcomment %}
         <p class="contnt mb-8 leading-relaxed">I am a 17 year old programmer from UBC based in Vancouver. I develop projects using Python and Java. I am passionate about Math, Computers and Physics and enjoy teaching these subjects. Feel free to look at the courses I offer and contact me if you have any questions or suggestions.</p>
@@ -501,5 +508,67 @@ header .container {
       </div>
     </div>
   </section>
+
+  {% comment %} <script type="text/javascript">
+
+    // List of sentences
+    var _CONTENT = [ "I am Sidak Arora", "I like coding", "and soccer..."];
+    
+    // Current sentence being processed
+    var _PART = 0;
+    
+    // Character number of the current sentence being processed 
+    var _PART_INDEX = 0;
+    
+    // Holds the handle returned from setInterval
+    var _INTERVAL_VAL;
+    
+    // Element that holds the text
+    var _ELEMENT = document.querySelector("#text");
+    
+    // Implements typing effect
+    function Type() { 
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX + 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX++;
+    
+        // If full sentence has been displayed then start to delete the sentence after some time
+        if(text === _CONTENT[_PART]) {
+            clearInterval(_INTERVAL_VAL);
+            setTimeout(function() {
+                _INTERVAL_VAL = setInterval(Delete, 50);
+            }, 1000);
+        }
+    }
+    
+    // Implements deleting effect
+    function Delete() {
+        var text =  _CONTENT[_PART].substring(0, _PART_INDEX - 1);
+        _ELEMENT.innerHTML = text;
+        _PART_INDEX--;
+    
+        // If sentence has been deleted then start to display the next sentence
+        if(text === '') {
+            clearInterval(_INTERVAL_VAL);
+    
+            // If last sentence then display the first one, else move to the next
+            if(_PART == (_CONTENT.length - 1))
+                _PART = 0;
+            else
+                _PART++;
+            _PART_INDEX = 0;
+    
+            // Start to display the next sentence after some time
+            setTimeout(function() {
+                _INTERVAL_VAL = setInterval(Type, 100);
+            }, 200);
+        }
+    }
+    
+    // Start the typing effect on load
+    _INTERVAL_VAL = setInterval(Type, 100);
+    
+    </script>
+     {% endcomment %}
 
 {% endblock body %}
