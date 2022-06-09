@@ -32,6 +32,18 @@
   .ani{
     font-size: 20px; 
   }
+
+  ul.a {
+    text-indent: 30px;
+    list-style-type: circle;
+  }
+
+  .dim{
+    height: 610px; 
+    width: 300px;
+  }
+
+  
   </style>
 
 <!-- Background image -->
@@ -62,7 +74,7 @@
   <div class="container px-5 py-24 mx-auto">
     <div class="text-center mb-20">
       <h1 class="sm:text-3xl text-2xl font-medium title-font text-gray-900 mb-4">Our Courses</h1>
-      <p style= "line-height: 2; color: grey; "class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum iste deserunt provident aperiam totam eligendi deleniti rem odit ut facilis.</p>
+      <p style= "line-height: 2; color: grey; "class="text-base leading-relaxed xl:w-2/4 lg:w-3/4 mx-auto text-gray-500s">At Apricus Learning, several courses Math, Science and coding are offered. With each course, practice material will be provided to ensure results.</p>
       <div class="flex mt-6 justify-center">
         <div class="w-16 h-1 rounded-full bg-indigo-500 inline-flex"></div>
       </div>
@@ -70,27 +82,52 @@
     
     <div class="flex flex-wrap -m-4">
       <div class="xl:w-1/4 md:w-1/2 p-4">
-        <div class="bg-m p-6 rounded-lg">
+        <div class="dim bg-m p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src="static/math.jpg" alt="content">
-          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Chichen Itza</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          {% comment %} <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3> {% endcomment %}
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Mathematics</h2>
+          <p class="leading-relaxed text-base">We offer Math Courses from grades 8-12. Each course is designed according to the BC curriculum. All students will recieve a final exam/review package that will gurantee their expertise in the subjects.<br><br>
+            <b>Rates:</b>
+            <ul class= "a">
+              <li>Math 8/9: $20/hr</li>
+              {% comment %} <li>Math 9: $20/hr</li> {% endcomment %}
+              <li>Pre Calculus 11/12: $25/hr</li>
+              <li>Calculus 12: $35/hr</li>
+            </ul> 
+          </p>
         </div>
       </div>
+
+
       <div class="xl:w-1/4 md:w-1/2 p-4">
-        <div class="bg-m p-6 rounded-lg">
+        <div class="dim bg-m p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src="static/physics.jpg" alt="content">
-          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Colosseum Roma</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Physics</h2>
+          <p class="leading-relaxed text-base">We teach Physics to students in Grades 10, 11 and 12. Our way of teaching is highly logical with very less memorization. This assures that the student understands the material and
+            can solve a wide variety of problems. <br><br>
+            <b>Rates:</b>
+            <ul class= "a">
+              <li>Physics 10: $18/hr</li>
+              {% comment %} <li>Math 9: $20/hr</li> {% endcomment %}
+              <li>Physics 11: $25/hr</li>
+              <li>Physics 12: $28/hr</li>
+            </ul> 
+          </p>
         </div>
       </div>
+
+
       <div class="xl:w-1/4 md:w-1/2 p-4">
-        <div class="bg-m p-6 rounded-lg">
+        <div class="dim bg-m p-6 rounded-lg">
           <img class="h-40 rounded w-full object-cover object-center mb-6" src="static/coding.jpg" alt="content">
-          <h3 class="tracking-widest text-indigo-500 text-xs font-medium title-font">SUBTITLE</h3>
-          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Great Pyramid of Giza</h2>
-          <p class="leading-relaxed text-base">Fingerstache flexitarian street art 8-bit waistcoat. Distillery hexagon disrupt edison bulbche.</p>
+          <h2 class="text-lg text-gray-900 font-medium title-font mb-4">Computer Programming</h2>
+          <p class="leading-relaxed text-base">At Apricus Learning, we teach Python from Grades 7-12. They will learn about arrays, lists, functions classes, files, etc. They will also have a chance to put their 
+            knowledge to use by working on projects like Hangman game,
+            sudoku solvers and many more. <br>
+             <b>Rates:</b>
+             <ul class= "a">
+               <li>Python: $25/hr </li>
+             </ul> </p>
         </div>
       </div>
       <div class="xl:w-1/4 md:w-1/2 p-4">
